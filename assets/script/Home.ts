@@ -1,14 +1,11 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, director, Node } from "cc";
 const { ccclass, property } = _decorator;
 
-@ccclass('Home')
+@ccclass("Home")
 export class Home extends Component {
-    start() {
+  start() {}
 
-    }
-
-    update(deltaTime: number) {
-        
-    }
+  jumpToScene(_, scene) {
+    director.loadScene(scene);
+  }
 }
-
